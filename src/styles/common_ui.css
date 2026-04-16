@@ -1,0 +1,84 @@
+
+/*-----------------------------*/
+
+.app-header{
+  width:100%; position: absolute; top:0; left:0; z-index: 1000;
+  >.util-bar{
+    width:100%; height: 44px; position: relative;
+    border-bottom: 1px solid var(--color-gray-150);
+    >.right-block{
+      position: absolute; right:24px; top:0; height: 44px;
+      >img{
+        height: 100%;
+      }
+    }
+  }
+  >.gnb-bar{
+    width:100%; position:relative; display:flex; justify-content: center; align-items: center;
+    height: 88px;
+    >.logo-wrap{
+      display: block; position: absolute; left:24px; top: 16px; width:180px; height: 46px;
+      >img{ max-width:100%;}
+    }
+    >.gnb-menu-wrap{
+      width:100%; position: relative; overflow: hidden;
+      >.inner-menu-bar{
+        width:100%; display:flex; justify-content: center; align-items: center;
+        >.menu-item{
+          display: block; padding: 24px 16px; margin: 0 16px;
+          font-size: 20px; font-weight: 700;
+          color: var(--color-gray-900);
+        }
+      }
+    }
+    >.btn-gnb-burger{
+      width:48px; height: 48px; position: absolute; right:24px; top: 16px;
+      display: flex; justify-content: center; align-items: center;
+      cursor: pointer;
+      >.line-wrap{
+        width:24px; height:24px;
+        >.line{
+          display: block; width:100%; height: 2px; border-top: 2px solid var(--color-gray-900); margin: 6px 0;
+          border-radius: 4px;
+          transition: transform 0.3s ease, opacity 0.2s ease, width 0.3s ease;
+          &.line-1{ width:100%; }
+          &.line-2{ width:80%; }
+          &.line-3{ width:60%; }
+        }
+      }
+      &:hover>.line-wrap>.line{
+        width: 100%;
+      }
+      &.active{
+        >.line-wrap>.line-1{
+          transform: translateY(5px) rotate(45deg);
+        }
+        >.line-wrap>.line-2{
+          opacity: 0; width:100%;
+          transform: scaleX(0);
+        }
+        >.line-wrap>.line-3{
+          transform: translateY(-11px) rotate(-45deg); width:100%;
+        }
+      }
+    }
+  }  
+}
+
+.app-footer{
+  display: block; width:100%; position: relative;
+  border-top: 1px solid var(--color-gray-150);
+  >.footer-link-bar{
+    width:100%; padding: 16px 0; text-align: center;
+    border-bottom: 1px solid var(--color-gray-150);
+    >img{ width: 1600px; margin: 0 auto;}
+  }
+  >.footer-body-wrap{
+    width:100%; padding: 40px 0; text-align: center;
+    background-color: #F9F9F9;
+    >.img-full{ 
+      width: 1600px; margin: 0 auto; 
+    }
+  }
+}
+/*------------------------------*/
