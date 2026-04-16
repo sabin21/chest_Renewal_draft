@@ -1,15 +1,18 @@
+import headerUtilRight from '../assets/header_util_right.png'
+import logoDefault from '../assets/logo_default.svg'
+
 class AppHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
 
       <div class="util-bar">
         <div class="right-block">
-          <img src="/src/assets/header_util_right.png" alt="">
-        </div>  
+          <img src="${headerUtilRight}" alt="">
+        </div>
       </div>
       <div class="gnb-bar">
         <div class="logo-wrap">
-          <img src="/src/assets/logo_default.svg">
+          <img src="${logoDefault}">
         </div>
         <div class="gnb-menu-wrap">
           <div class="inner-menu-bar">
